@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Request A Spot In The League</h2>
+
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Index", "Battler", FormMethod.Post))
+        {
+            <div class="form-group">
+                @Html.Label("gamertag", "GamerTag: ")
+                @Html.TextBox("gamertag", null, new { @class = "form-control", type = "text" })
+                @Html.Label("lastname", "Last Name: ")
+                @Html.TextBox("lastname", null, new { @class = "form-control", type = "text" })
+                @Html.Label("age", "Age: ")
+                @Html.TextBox("age", null, new { @class = "form-control", type = "number", min = "0" })
+                @Html.Label("state", "Home State: ")
+                @Html.DropDownList("state",(IEnumerable<SelectListItem>)ViewBag.stateList, "Select a home State: ", new { @class="form-control"})
+                <button type="submit" class="btn btn-primary">Submit a Request</button>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (ViewBag.Success == true)
+        {
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Gamertag</th>
+                <th>Age</th>
+                <th>State</th>
+
+            </tr>
+            @foreach(var battler in (IEnumerable<Step_by_stepASP.NET.Models.Battler>)ViewBag.BattlerList)
+            {
+                <tr>
+                    <td>@battler.Id</td>
+                    <td>@battler.gamerTag</td>
+                    <td>@battler.age</td>
+                    <td>@battler.state</td>
+                </tr>
+            }
+        </table>
+        }
+        else
+        {
+            <p> Didn't work</p>
+        }
+    </div>
+</div>

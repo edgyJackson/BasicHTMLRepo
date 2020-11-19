@@ -1,0 +1,42 @@
+﻿@using Step_by_stepASP.NET.Models
+@model Step_by_stepASP.NET.ViewModels.RandomPokemonViewModel
+
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--using viewData-->
+<!--<h2>(((Pokemon)ViewData["Pokemon"]).Name)</h2>-->
+
+
+@*  
+    This is a comment
+    on multiple lines
+*@
+
+@{ 
+    var className = Model.Battlers.Count > 5 ? "popular" : null;
+}
+
+
+<h2 class=@className>@Model.Pokemon.Name</h2>
+
+
+@if (Model.Battlers.Count == 0)
+{
+    <p>No one has used this pokemon before</p>
+}
+
+else
+{
+    <ul>
+
+        @foreach (var battler in Model.Battlers)
+        {
+            <li>@battler.Name</li>
+        }
+
+    </ul>
+}

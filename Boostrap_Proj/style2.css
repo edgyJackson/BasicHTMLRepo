@@ -1,0 +1,65 @@
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#redgLogo{
+    height: 65px;
+    width: 65px;
+}
+#websiteTitle{
+    font-size: 10em;
+    vertical-align: middle;
+    font-family: 'Pacifico', cursive;
+    padding-left: 15px;
+    color: #cc2900;
+}
+
+#websiteSlogan{
+    font-size: 4.4em;
+
+}
+
+/*Carousel Styling*/
+.slide1{
+    background-image: url('bkgrnd1.png');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.slide2{
+    background-image: url('bkgrnd2.png');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.slide3{
+    background-image: url('bkgrnd3.png');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.carousel-caption h1{
+    font-size: 6.4em;
+    font-family: 'Pacifico', cursive;
+    padding-bottom: .4em;
+
+}
+
+.carousel-caption p{
+    font-size: 3em;
+}
+
+.card-caption{
+    
+}
+
+.wordMods{
+}

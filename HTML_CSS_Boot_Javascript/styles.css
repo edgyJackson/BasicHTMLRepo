@@ -1,0 +1,174 @@
+/*universal selector to get rid of margin padding box sizing to border box */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clr{
+    clear: both;
+}
+
+#mainHeader {
+
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: red;
+}
+
+a:active{
+    color: green;
+}   
+
+
+body {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font: normal 16px Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6em;
+
+}
+
+.post {
+    background-color: lightblue;
+
+}
+
+.container{
+    width: 80%;
+    
+    margin: auto;
+    border: 5px #d3d3d3 solid;
+}
+
+.button{
+    background-color: #333;
+    color: #ccc;
+    padding: 10px 15px;
+    border: none;
+
+}
+
+.button:hover{
+    background-color: #ff0000;
+}
+.categories{
+    
+    
+    width: 80%;
+    border: 5px #ccc solid;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.categories h3{
+    text-align: center;
+
+}
+.categories ul{
+    list-style: none;
+    padding-left: 2em;
+}
+
+.categories li{
+    padding-bottom: 5px;
+    border-bottom: dotted 1px #333/*black*/;
+    list-style-image: url('checkmark.png');
+}
+
+.myForm{
+
+    padding: 20px;
+}
+
+.myForm .formGroup{
+    padding-bottom: 15px;
+}
+
+.myForm label{
+    display:block;
+}
+
+.myForm input[type="text"], .myForm textarea {
+    padding: 8px;
+    width: 100%;
+}
+
+.block{
+    
+    float: left;
+    width: 33%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 1em;
+    
+
+}
+
+#mainBlock{
+    float: left;
+    width:70%
+}
+
+#sideBar{
+    background-color: #333;
+    color: #ccc;
+    float: right;
+    width:30%;
+    padding: 15px;
+    
+    
+    
+}
+
+
+.pBox{
+    width: 800px;
+    height: 500px;
+    border:1px solid #000;
+    margin-top: 30px;
+    position: relative;
+    background-image: url("bgimage.jpg");
+    background-repeat: no-repeat;
+    background-position: 100px 200px;
+    
+}
+
+.pBox h1{
+    position: absolute;
+    top:40px;
+}
+
+.myList li:first-child{
+
+    background-color: #ff0000;
+}
+
+.myList li:nth-child(5){
+    background-color: #ff0000;
+}
+
+.myList li:nth-child(even){
+    background-color: grey;
+}
+
+@media(max-width:600px){
+    #main{
+        width: 100%;
+        float:none;
+    }
+}
